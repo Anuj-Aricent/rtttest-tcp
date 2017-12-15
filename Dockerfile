@@ -6,8 +6,6 @@ RUN mkdir /app
 COPY tcp-server.py /app
 COPY calculator_common.py /app
 WORKDIR /app
-#ENV http_proxy ""
-#ENV https_proxy ""
-ENTRYPOINT ["/usr/bin/python"]
+ENTRYPOINT ["/usr/bin/python3"]
 CMD ["tcp-server.py"]
 EXPOSE "10000"
